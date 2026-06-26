@@ -1,6 +1,6 @@
 """
     pygments.lexers.monotal
-    ~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~
 
     Lexer for Uxntal (Monotal)
 
@@ -8,7 +8,7 @@
     :license: BSD, see LICENSE for details.
 """
 
-from pygments.lexer import RegexLexer, words
+from pygments.lexer import RegexLexer, words, bygroups
 from pygments.token import Comment, Keyword, Name, String, Number, \
     Whitespace, Literal, Operator, Token
 
@@ -63,6 +63,7 @@ class TalLexer(RegexLexer):
             (r'[|$](?!\S)', String),
 
             # Orange
+            (r'(?<!\S)(\S*/)([%\\~:]\S+)', bygroups(Token, Name.Decorator)),
             (r'[%\\~:]\S+', Name.Decorator),
 
             # Cyan

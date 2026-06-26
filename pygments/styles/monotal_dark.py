@@ -1,6 +1,6 @@
 """
     pygments.styles.monotal_dark
-    ~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Minimal Monokai inspired style optimized for Uxntal.
 
